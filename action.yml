@@ -1,0 +1,12 @@
+name: 'Done'
+description: 'Check if dependent jobs completed'
+inputs:
+  needs:
+    description: 'The GHA "needs" context'
+    required: true
+  skippable:
+    description: 'A space-separated list of jobs that can be skipped'
+    required: false
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
